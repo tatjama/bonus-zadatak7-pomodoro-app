@@ -14,7 +14,67 @@
     <title>Pomodoro app</title>
   </head>
   <body>
-    pomodoro short break long break start pause restart Settings Time (minutes)
-    pomodoro short break long break Font Color Apply
+    <div class="container">
+      <header>
+        <img src="./assets/logo.svg" alt="pomodoro">
+      </header>
+      <main>
+        <header>
+          <nav>
+            <ul>
+              <li>pomodoro</li>
+              <li>short break</li>
+              <li>long break</li>
+            </ul>
+          </nav>
+        </header>
+        <section class="timer__container" >
+          <div class="timer">
+            <div class="timer__indicator">
+              <div class="timer__display">00:00</div>
+              <button>restart</button>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <img src="./assets/icon-settings.svg" alt="">
+        </footer>
+      </main>
+      <section class="settings__container">
+        <header>
+          <h1>Settings</h1>          
+          <img src="./assets/icon-close.svg" alt="close">
+        </header>
+        <div class="settings__item settings__item--time">
+          <h1>Time (minutes)</h1>
+          <div class="settings__options">
+            <label for="pomodoro">pomodoro</label>
+            <input type="number" name="pomodoro" placeholder="0" value="25">
+            <label for="sbreak">short break</label>
+            <input type="number" name="sbreak" placeholder="0" value="5">
+            <label for="lbreak">long break</label>
+            <input type="number" name="lbreak" placeholder="0" value="15">            
+          </div>
+          <div class="settings__item settings__item--font">
+            <h1>Font</h1>
+            <div class="settings__options">
+              <input type="radio" name="font" checked>
+              <input type="radio" name="font" >
+              <input type="radio" name="font" >
+            </div>
+          </div>
+          <div class="settings__item settings__item--color">
+            <h1>Color</h1>
+            <div class="settings__options">
+              <input type="radio" name="color" checked>
+              <input type="radio" name="color" >
+              <input type="radio" name="color" >
+            </div>
+          </div>
+          <button>Apply</button>
+        </div>
+      </section>
+    </div>
+         
   </body>
 </html>
