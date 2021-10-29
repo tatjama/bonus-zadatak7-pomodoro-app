@@ -22,62 +22,100 @@
       <header>
         <img src="./assets/logo.svg" alt="pomodoro">
       </header>
-      <main>
-        <header>
-          <nav>
-            <ul>
-              <li>pomodoro</li>
+      <main>        
+            <ul class="nav">
+              <li class="active">pomodoro</li>
               <li>short break</li>
               <li>long break</li>
-            </ul>
-          </nav>
-        </header>
+            </ul>        
         <section class="timer__container" >
           <div class="timer">
             <div class="timer__indicator">
-              <div class="timer__display">00:00</div>
-              <button>restart</button>
+              <h1 class="timer__display">00:00</h1>
+              <h3>restart</h3>
             </div>
           </div>
         </section>
-        <footer>
+        <footer class="settings__btn">
           <img src="./assets/icon-settings.svg" alt="">
         </footer>
       </main>
-      <section class="settings__container">
-        <header>
-          <h1>Settings</h1>          
-          <img src="./assets/icon-close.svg" alt="close">
-        </header>
-        <div class="settings__item settings__item--time">
-          <h1>Time (minutes)</h1>
-          <div class="settings__options">
-            <label for="pomodoro">pomodoro</label>
-            <input type="number" name="pomodoro" placeholder="0" value="25">
-            <label for="sbreak">short break</label>
-            <input type="number" name="sbreak" placeholder="0" value="5">
-            <label for="lbreak">long break</label>
-            <input type="number" name="lbreak" placeholder="0" value="15">            
-          </div>
-          <div class="settings__item settings__item--font">
-            <h1>Font</h1>
+      <div class="settings__wrapper">
+        <section class="settings__container">
+          <header class="settings__header">
+            <h2>Settings</h2>          
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#1E213F" fill-rule="evenodd" d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z" opacity=".5"/></svg>
+          </header>
+          <div class="settings__item settings__item--time">
+            <h4>Time (minutes)</h4>
             <div class="settings__options">
-              <input type="radio" name="font" checked>
-              <input type="radio" name="font" >
-              <input type="radio" name="font" >
+              <label for="pomodoro" class="settings__option">
+                pomodoro            
+                <input type="number" name="pomodoro" step="1" placeholder="0" value="25">
+                <div class="settings__btns">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                </div>
+              </label>
+              <label for="sbreak" class="settings__option">
+                short break
+                <input type="number" name="sbreak" placeholder="0" value="5">
+                <div class="settings__btns">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                </div>
+              </label>
+              <label for="lbreak" class="settings__option ">
+                long break
+                <input type="number" name="lbreak" placeholder="0" value="15">  
+                <div class="settings__btns">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                </div>
+              </label>          
             </div>
           </div>
-          <div class="settings__item settings__item--color">
-            <h1>Color</h1>
-            <div class="settings__options">
-              <input type="radio" name="color" checked>
-              <input type="radio" name="color" >
-              <input type="radio" name="color" >
+          <!--Start Settings Font-->
+            <div class="settings__item settings__item--font">
+              <h4>Font</h4>
+              <div class="settings__options settings__options--right">
+                <label for="font" class="radio-container">
+                  <input type="radio"  name="font" value="Kumbh" checked>
+                  <span class="checkmark"></span>
+                </label>
+                <label for="font" class="radio-container">
+                  <input type="radio" name="font" value="Roboto">
+                  <span class="checkmark"></span>
+                </label>
+                <label for="font" class="radio-container">
+                  <input type="radio" name="font" value="Mono">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
             </div>
-          </div>
-          <button>Apply</button>
-        </div>
-      </section>
+            <!--End settings font-->
+            <!--Start settings Color-->
+            <div class="settings__item settings__item--color">
+              <h4>Color</h4>
+              <div class="settings__options settings__options--right">
+                <label for="color" class="radio-container">
+                  <input type="radio"  name="color" value="red" checked>
+                  <span class="checkmark"></span>
+                </label>
+                <label for="font" class="radio-container">
+                  <input type="radio" name="color" value="blue">
+                  <span class="checkmark"></span>
+                </label>
+                <label for="font" class="radio-container">
+                  <input type="radio" name="color" value="violet">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <!--End Settings Color-->
+            <button>Apply</button>
+        </section>
+      </div>
     </div>
          
   </body>

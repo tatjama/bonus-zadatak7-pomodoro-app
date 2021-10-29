@@ -1,22 +1,30 @@
 :root{
     --primary-red: #F87070;
+    --primary-red-hover: #f89898;
     --primary-blue: #70F3F8;
     --primary-violet: #D881F8;
     --dark-blue: #1E213F;
     --dark-gray: #161932;
+    --dark-gray-transparent: rgba(22, 25, 50, 0.1);
     --white: #FFFF;
     --light-gray: #EFF1FA;
     --light-blue: #D7E0FF;
+    --light-blue-transparent: rgba(215, 224, 255, 0.7);
 
 }
-body{
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{    
+    /*font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Space Mono', monospace;*/
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: 14px;
-    font-weight:bold;
     line-height: 18px;
+    background-color: var(--dark-blue);
 }
 h1{
     font-size: 100px;
@@ -26,6 +34,7 @@ h1{
 h2{
     font-size: 28px;
     line-height: 34px;
+    color: var(--dark-gray);
 }
 h3{
     font-size: 16px;
@@ -33,13 +42,336 @@ h3{
     letter-spacing: 15px;
     text-transform: uppercase;
 }
-h1{
+h4{
     font-size: 13px;
     line-height: 16px;
+    margin: 24px 0;
     letter-spacing: 5px;
     text-transform: uppercase;
+    color: var(--dark-gray);
 }
-@media screen and (max-width:450px) {
+label, li{
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--dark-blue);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+button{
+    width: 140px;
+    height: 53px;
+    margin: 5px 160px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: var(--white);
+    border: 0;
+    outline: none;
+    background-color: var(--primary-red);
+    padding: 17px;
+    cursor: pointer;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+button:hover{
+    background-color:var(--primary-red-hover);
+}
+ul{
+    list-style: none;
+}
+/*START MAIN SECTION*/
+.container{
+    width: 410px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+.nav{
+    margin: 45px auto;
+    padding: 7.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 373px;
+    background-color: var(--dark-gray);
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+}
+li{
+    font-weight: 700;
+    width: 120px;
+    padding: 17px;
+    color: var(--light-blue-transparent);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+li.active{
+    background-color:var(--primary-red);
+    color: var(--dark-gray);
+}
+.timer__container{
+    width:410px;
+    height: 410px;
+    padding: 22px;
+    background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+    box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.timer{
+    width: 366px;
+    height: 366px;
+    padding: 13.5px;
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.timer__indicator{
+    width: 339px;
+    height: 339px;
+    padding: 33px;
+    border: 11px solid var(--primary-red);
+    color: var(--white);
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.timer__indicator h1{
+    margin: 20px auto;
+    margin-top:47.5px;
+    line-height:132px;
+}
+.settings__btn{
+    margin: 63px;
+}
+/*END MAIN SECTION*/
+
+/*START SETTINGS SECTION*/
+.settings__wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.settings__container{
+    width: 540px;
+    height:464px;
+    margin: 155px auto;
+    background-color:var(--white);
+    padding: 34px 40px;
+    text-align: left;
+    border-radius:25px;
+    -webkit-border-radius:25px;
+    -moz-border-radius:25px;
+    -ms-border-radius:25px;
+    -o-border-radius:25px;
+}
+.settings__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 31px;    
+}
+.settings__header svg{
+    cursor: pointer;
+}
+.settings__header svg:hover path{
+    fill: var(--dark-blue);
+}
+.settings__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--dark-gray-transparent);
+}
+/*Start Setting Duration*/
+.settings__item:first-of-type{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.settings__options{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="number"]{
+    width:140px;
+    height: 48px;
+    margin: 8px 0px;
+    padding: 15px;
+    border: 0;
+    background-color:var(--light-gray);
+    outline: none;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+.settings__btns{
+    width: 12px;
+    height: 17px;
+    position: relative;
+    bottom: 50px;
+    left: 112px;
+}
+.settings__btns svg:hover path{
+    fill: var(--dark-blue);
+}
+/*End Setting Duration*/
+/*Start Setting Font*/
+.settings__item--font{
+    padding: 12px 0px;
+}
+.settings__options--right{
+    width: 160px;
+    height: 50px;
+}
+.radio-container {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  .radio-container:hover{
+    border: 2px solid var(--light-gray);
+  }
+  .radio-container:nth-child(1){
+      font-weight: 700;
+  }
+  .radio-container:nth-child(2){
+    font-family: 'Roboto Slab', serif;
+    margin: 0px 5px ;
+    font-weight: 400;
+  }
+  .radio-container:nth-child(3){
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+  }  
+/* Hide the browser's default radio button */
+.radio-container input[type="radio"] {
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width:40px;
+    height: 40px;
+    background-color:var(--light-gray);
+    border: 6px double transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  /* On mouse-over, add a grey background color */
+  /*.radio-container:hover input ~ .checkmark {
+    border: 6px double red;
+  }
+  */
+  /* When the radio button is checked, add a blue background */
+  .radio-container input:checked ~ .checkmark {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .settings__item--font .checkmark:after {
+    content: "Aa";
+    position: absolute;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 4px 3px;
+  }
+ /*End setting Font*/ 
+ /*Start setting Color*/
+ .settings__item--color{
+    padding: 12px 0px;
+} 
+.settings__item--color .radio-container:nth-child(1) .checkmark{
+    background-color: var(--primary-red);
+}
+.settings__item--color .radio-container:nth-child(2) .checkmark{
+    background-color: var(--primary-blue);
+}
+.settings__item--color .radio-container:nth-child(3) .checkmark{
+    background-color: var(--primary-violet);
+}
+.settings__item--color input:checked ~.checkmark:after {
+    content: url(../assets/check-mark.png);
+    position: absolute;
+    bottom: 0px;
+  }
+/*End setting Color*/
+.settings__item--color .radio-container input:checked ~ .checkmark {
+    /*background-color: var(--dark-blue);
+    color: var(--white);*/
+
+  }
+  /* Show the indicator (dot/circle) when checked */
+.settings__item--color .radio-container input:checked ~ .checkmark:after {
+    
+  }
+  
+  /* Style the indicator (dot/circle) */
+  
+@media screen and (max-width:600px) {
     body{
         font-size: 12px;
         line-height: 14px;
