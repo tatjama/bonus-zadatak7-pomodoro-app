@@ -4,6 +4,7 @@
     --primary-blue: #70F3F8;
     --primary-violet: #D881F8;
     --dark-blue: #1E213F;
+    --dark-blue-transparent: rgba(30, 33, 63, 0.6);
     --dark-gray: #161932;
     --dark-gray-transparent: rgba(22, 25, 50, 0.1);
     --white: #FFFF;
@@ -12,6 +13,18 @@
     --light-blue-transparent: rgba(215, 224, 255, 0.7);
 
 }
+/*.var1{
+    --primary-color: #F87070;
+    --primary-font:font-family: 'Kumbh Sans', sans-serif;
+}
+.var2{
+    --primary-color: #70F3F8;
+    --primary-font:font-family: 'Roboto Slab', serif;
+}
+.var1{
+    --primary-color: #D881F8;
+    --primary-font: font-family: 'Space Mono', monospace;
+}*/
 *{
     margin: 0;
     padding: 0;
@@ -186,6 +199,7 @@ li.active{
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: var(--dark-blue-transparent);
 }
 .settings__container{
     width: 540px;
@@ -293,9 +307,8 @@ input[type="number"]{
   .radio-container:nth-child(3){
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-  }  
-/* Hide the browser's default radio button */
-.radio-container input[type="radio"] {
+  }
+  .radio-container input[type="radio"] {
     position: absolute;
     left: 0px;
     opacity: 0;
@@ -304,8 +317,6 @@ input[type="number"]{
     height: 40px;
     z-index: 1;
   }
-  
-  /* Create a custom radio button */
   .checkmark {
     position: absolute;
     top: 3px;
@@ -320,18 +331,10 @@ input[type="number"]{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-  /* On mouse-over, add a grey background color */
-  /*.radio-container:hover input ~ .checkmark {
-    border: 6px double red;
-  }
-  */
-  /* When the radio button is checked, add a blue background */
   .radio-container input:checked ~ .checkmark {
     background-color: var(--dark-blue);
     color: var(--white);
   }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
   .settings__item--font .checkmark:after {
     content: "Aa";
     position: absolute;
@@ -359,21 +362,113 @@ input[type="number"]{
     bottom: 0px;
   }
 /*End setting Color*/
-.settings__item--color .radio-container input:checked ~ .checkmark {
-    /*background-color: var(--dark-blue);
-    color: var(--white);*/
-
-  }
-  /* Show the indicator (dot/circle) when checked */
-.settings__item--color .radio-container input:checked ~ .checkmark:after {
-    
-  }
-  
-  /* Style the indicator (dot/circle) */
   
 @media screen and (max-width:600px) {
     body{
         font-size: 12px;
         line-height: 14px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    h2{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    h4{
+        font-size: 11px;
+        line-height: 11px;
+        letter-spacing:4px;
+        margin-bottom: 14px;
+    }
+    li{
+        width: 108px;
+    }
+    button{
+        margin: 20px 70px;
+    }
+    header img{
+        width: 117px;
+        height:24px;
+    }
+    .container{
+        width: 300px;
+        margin: 32px auto;
+    }
+    .nav{
+        width: 327px;
+    }
+    .timer__container{
+        width: 300px;
+        height: 300px;
+        padding: 16px;
+    }
+    .timer{
+        width: 268px;
+        height: 268px;
+        padding: 13.5px;
+    }
+    .timer__indicator{
+        width: 248px;
+        height: 248px;
+        padding: 10px;
+    }
+    .timer__indicator h1{
+        margin: 20px auto;
+        margin-top:50px;
+        line-height: 80px;
+    }
+    .settings__btn{
+        margin: 79px;
+    }
+    /*Start Setting Section*/
+    .settings__container{
+        width: 327px;
+        height:550px;
+        padding: 24px;
+        margin: 46px auto;
+    }
+    .settings__header{
+        margin-bottom: 26px;
+    }
+    .settings__options--left{
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .settings__item:first-of-type{
+        align-items: center;
+    }
+    .settings__option{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    input[type="number"]{
+        height: 40px;
+        margin: 4px -90px 4px 0px;
+    }
+    input[name="sbreak"]{
+        margin-right:-85px;
+    }
+    .settings__btns{
+        left:-20px;
+        bottom: 5px;
+    }
+    .settings__item{
+        flex-direction: column;
+    }
+    .settings__item--font{        
+        padding: 21px;
+    }
+    .settings__item--font h4{
+        margin-top:0px;        
+    }
+    .settings__item--color h4{
+        margin-top:4px;        
     }
 }
